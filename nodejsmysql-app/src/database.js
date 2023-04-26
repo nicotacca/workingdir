@@ -1,5 +1,5 @@
 const mysql = require('mysql2')
-const { database } = require('./keys')
+const { database, database2 } = require('./keys')
 const { promisify } = require('util')
 const pool = mysql.createPool(database)
 
@@ -28,4 +28,38 @@ pool.getConnection((err, connection) => {
 
 pool.query = promisify(pool.query)
 
-module.exports = pool
+
+/* PARA SQL SERVER */
+
+const sql = require('mssql')
+const sqlConfig = database2
+
+const pool2 = new sql.ConnectionPool(database2)
+pool2.connect()
+  .then(console.log('POOL SQL SERVER CONECTADA'))
+  .catch(function (err) {
+    console.error("ERROR AL CREAR POOL SQL SERVER", err);
+  });
+
+module.exports = {pool, pool2}
+
+/* SIN POOLING */
+
+/* const conectar = async () => {
+ try {
+  // make sure that any items are correctly URL encoded in the connection string
+  await sql.connect(sqlConfig)
+  //const result = await sql.query`select * from facOrdenes fo where nOrden = '530300'`
+  //console.dir(result)
+
+  console.log('DB sqlserver esta conectada')
+ } catch (err) {
+  // ... error checks
+  console.log('Error en la conexion a la BD')
+  console.log(err)
+  console.log(database2)
+ }
+}
+
+conectar() */
+

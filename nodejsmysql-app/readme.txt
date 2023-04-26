@@ -1,4 +1,15 @@
 
+* INT:
+
+- conectar la 2da BD y probar
+- intentar hacer pooling de sqlserver
+- Crear endpoint para opis
+- Caso general trae el top 100 opis
+- Permitir uso de datatables para filtros
+- Permitir filtrar (contemplar los distintos casos de filtro)
+- 
+
+
 
 COMANDOS
 
