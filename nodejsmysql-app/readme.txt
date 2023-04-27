@@ -3,6 +3,8 @@
 
 - conectar la 2da BD y probar
 - intentar hacer pooling de sqlserver
+- crear home para intrav1
+- crear link para 
 - Crear endpoint para opis
 - Caso general trae el top 100 opis
 - Permitir uso de datatables para filtros

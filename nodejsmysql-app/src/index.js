@@ -18,7 +18,8 @@ require('./lib/passport')
 app.set('port', process.env.PORT || 3500)
 app.set('views', path.join(__dirname, 'views'))
 app.engine('.hbs', exphbs({
-    defaultLayout: 'main',
+    //defaultLayout: 'main',
+    defaultLayout: 'main2',
     layoutsDir: path.join(app.get('views'), 'layouts'),
     partialsDir: path.join(app.get('views'), 'partials'),
     extname: '.hbs',
@@ -50,11 +51,14 @@ app.use((req, res, next) => {
   next();
 })
 
-// Routes
+// Routes (del tuto)
 
 app.use(require('./routes/'));
 app.use(require('./routes/authentication'));
 app.use('/links', require('./routes/links'));
+
+// Routes (para practicar)
+app.use('/intrav1', require('./routes/opis_consulta'));
 
 // Public : codigo al que el navegador puede acceder --> aca va todo lo referido a JS CSS EL CLIENTE IMAGENES ETC
 app.use(express.static(path.join(__dirname, 'public')))
