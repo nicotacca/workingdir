@@ -6,9 +6,10 @@ const { isLoggedIn, isNotLoggedIn } = require('../lib/auth')
 
 // GETS
 
-router.get('/add', isLoggedIn, (req, res) => {
+router.get('/add', /* isLoggedIn */ (req, res) => {
     res.render('./../views/links/add.hbs')
 })
+
 
 
 router.get('/', isLoggedIn, async (req, res) => {

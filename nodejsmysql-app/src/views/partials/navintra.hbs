@@ -1,45 +1,61 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container">
-    <a class="navbar-brand" href="/">WEBintrav1</a>
+    <a class="navbar-brand" href="">WEBintrav1</a>
+    {{!-- boton toggler --}}
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+    {{!-- Barra mr auto --}}
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        {{!-- {{#if user}} --}}
+      <ul class="navbar-nav mr-auto">
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">
-              Links
+              OPIS
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="/links">Todos los links</a>
-              <a class="dropdown-item" href="/links/add">Agregar un enlace</a>
-              {{!-- <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a> --}}
+              <a class="dropdown-item" href="">Busqueda de OPIs</a>
+              <a class="dropdown-item" href="">Normas Operativas</a>
+              <a class="dropdown-item" href="">OPIS por operador</a>
+              <a class="dropdown-item" href="">OPIS por profesional ejecutante</a>
+              <a class="dropdown-item" href="">OPIS valorizadas</a>
             </div>
           </li>
           <li class="nav-item">
-            <a href="/profile" class="nav-link">AL PERFIL</a>
+            <a href="" class="nav-link">REPORTES</a>
           </li>
           <li class="nav-item">
-            <a href="/logout" class="nav-link">CERRAR SESION</a>
+            <a href="" class="nav-link">ESTADISTICAS</a>
+          </li>
+      </ul>
+    </div>
+
+    
+    {{!-- Barra ml auto --}}
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        {{!-- {{#if user}} --}}
+          
+          <li class="nav-item">
+            <a href="" class="nav-link">AL PERFIL</a>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link">CERRAR SESION</a>
           </li>
 
         {{!-- {{else}} --}}
           <li class="nav-item">
-            <a class="nav-link" href="/signin">SignIn</a>
+            <a class="nav-link" href="">SignIn</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/signup">SignUp</a>
+            <a class="nav-link" href="">SignUp</a>
           </li>
         {{!-- {{/if}} --}}
         
         <li class="nav-item active">
-          <a class="nav-link" href="/links">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="/intrav1/home">Home <span class="sr-only">(current)</span></a>
         </li>
-        
       </ul>
     </div>
   </div>

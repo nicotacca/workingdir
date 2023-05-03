@@ -11,6 +11,15 @@
 - Permitir filtrar (contemplar los distintos casos de filtro)
 - 
 
+DONDE ME QUEDE:
+- ya esta el nav
+- arrancar por:
+* router de get que traiga top 100 opis
+* al ir al endpoint de opis
+* hacer el layout
+* preparar la logica que va en el router
+
+
 
 
 COMANDOS

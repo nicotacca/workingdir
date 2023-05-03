@@ -1,11 +1,43 @@
-<main class="index">
+
+
+{{!-- HOME + TIENE LA IMG EN EL CSS --}}
+
+{{!-- <main class="index">
     <header class="masthead d-flex">
         <div class="container text-center my-auto">
             <h1 class="mb-1">Intranet de Prueba</h1>
             <h3 class="mb-5">
                 <em>Aprendiendo JS con nodeJS y express + MySQL y SQLSERVER</em>
             </h3>
-            <a href="/signin" class="btn btn-primary">Accede a las features aqui!</a>
+            <a href="/intrav1/home" class="btn btn-light">Accede a las features aqui!</a>
         </div>
     </header>
-</main>
+</main> --}}
+
+
+
+
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/links/add" method="POST">
+                        <div class="from-group p-2">
+                            <input type="text" class="form-control" placeholder="Title" name="title" autofocus>
+                        </div>
+                        <div class="from-group p-2">
+                            <input type="url" class="form-control" placeholder="URL" name="url">
+                        </div>
+                        <div class="from-group p-2">
+                            <textarea name="description" class="form-control" rows="2" placeholder="Description"></textarea>
+                        </div>
+                        <div class="from-group p-2">
+                            <button class="btn btn-success btn-block">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

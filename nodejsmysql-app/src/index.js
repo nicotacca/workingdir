@@ -58,7 +58,9 @@ app.use(require('./routes/authentication'));
 app.use('/links', require('./routes/links'));
 
 // Routes (para practicar)
-app.use('/intrav1', require('./routes/opis_consulta'));
+//app.use('/intrav1', require('./routes/opis_consulta'));
+app.use('/intrav1', require('./routes/home'));
+app.use('/intrav1/opis', require('./routes/intrav1/opis/opis_consulta'));
 
 // Public : codigo al que el navegador puede acceder --> aca va todo lo referido a JS CSS EL CLIENTE IMAGENES ETC
 app.use(express.static(path.join(__dirname, 'public')))
