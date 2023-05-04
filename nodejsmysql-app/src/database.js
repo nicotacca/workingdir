@@ -32,7 +32,7 @@ pool.query = promisify(pool.query)
 /* PARA SQL SERVER */
 
 const sql = require('mssql')
-const sqlConfig = database2
+//const sqlConfig = database2
 
 const pool2 = new sql.ConnectionPool(database2)
 pool2.connect()

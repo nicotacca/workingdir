@@ -1,12 +1,16 @@
 const express = require('express')
 const router = express.Router()
-//const pool2 = require('../../../database')
 
+// IMPORTAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAR LCDLL
+const { pool2 } = require('../database')
+const { pool } = require('../database')
 
 // GETS
 
-router.get('/', (req, res) => {
-    res.render('./intrav1/home.hbs')
+router.get('/', async (req, res) => {
+    res.render('./intrav1/opis/')
+    const prueba = await (await pool2.query('select * from facOrdenes fo where nOrden = 539698')).recordset
+    console.log(prueba)
 })
 
 
